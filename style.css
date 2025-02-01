@@ -1,0 +1,157 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    /* Gradient */
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    /* Text */
+    --dark-blue: hsl(238, 29%, 16%);
+    --soft-red: hsl(14, 88%, 65%);
+    --very-dark-gray-blue: hsl(237, 12%, 33%);
+    --dark-gray-blue: hsl(240, 6%, 50%);
+
+    --divider-color: hsl(240, 5%, 91%);
+
+    --font-size: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans';
+    background: linear-gradient(var(--soft-violet), var(--soft-blue));
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px;
+    padding: 35px 0;
+    overflow: hidden;
+}
+
+.faq-container {
+    width: 100%;
+    margin-left: 25px;
+}
+
+.faq-container h1 {
+    margin: 25px 0;
+}
+
+.container-img {
+    margin-left: -150px
+}
+
+.faq-items {
+    width: 85%;
+}
+
+.faq-item {
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-answer {
+    width: 100%;
+    display: none;
+    font-size: var(--font-size);
+    color: var(--very-dark-gray-blue);
+}
+
+/* Image */
+
+/* #imgBox {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+}
+
+#imgBackground {
+    position: absolute;
+    width: 50%;
+    top: 50px;
+    left: 0;
+} */
+
+.mobile-only {
+    display: none;
+}
+
+.desktop-only {
+    display: block;
+}
+
+/* Click classes */
+
+.active {
+    transform: rotate(180deg);
+}
+
+.active-show {
+    display: block;
+    transition: all ease-in 1s;
+}
+
+/* Mobile CSS */
+
+@media only screen and (max-width: 800px) {
+    .mobile-only {
+        display: block;
+    }
+    .desktop-only {
+        display: none;
+    }
+    .container {
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .faq-container h1 {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .container-img {
+        margin: 0 auto;
+        margin-top: -40px;
+        width: 80%;
+        height: auto;
+        position: relative;
+    }
+
+    .image1 {
+        position: absolute;
+        top: -100px;
+        left: 0;
+    }
+
+    .image2 {
+        position: absolute;
+        top: -10px;
+        left: -10px;
+    }
+}
